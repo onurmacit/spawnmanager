@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnManager : MonoBehaviour
+{
+    public GameObject diamond;
+   
+
+    private void Start()
+    {
+        InvokeRepeating("Spawn", 5f, 1f);
+    }
+    void Spawn()
+    {
+        Instantiate(diamond, transform.position, Quaternion.identity);
+    }
+}
